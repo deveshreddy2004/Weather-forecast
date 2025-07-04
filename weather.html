@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window View</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="weather-app">
+        <div class="header">
+            <div class="app-title">Window View</div>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search city...">
+                <button class="btn" id="search-btn"><i class="fas fa-search"></i> Search</button>
+                <button class="btn btn-outline" id="location-btn"><i class="fas fa-location-arrow"></i></button>
+            </div>
+        </div>
+
+        <div class="panel current-weather">
+            <div class="location">
+                <div class="city" id="city">New York, US</div>
+                <div class="date" id="date">Monday, June 10, 2025</div>
+            </div>
+            
+            <div class="weather-main">
+                <img src="https://openweathermap.org/img/wn/01d@2x.png" class="weather-icon" id="weather-icon">
+                <div class="temperature" id="temperature">24°C</div>
+                <div class="description" id="description">Sunny</div>
+            </div>
+            
+            <div class="weather-details">
+                <div class="detail-card">
+                    <i class="fas fa-wind"></i>
+                    <div class="detail-value" id="wind-speed">5.2 km/h</div>
+                    <div class="detail-label">Wind Speed</div>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-tint"></i>
+                    <div class="detail-value" id="humidity">65%</div>
+                    <div class="detail-label">Humidity</div>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-temperature-high"></i>
+                    <div class="detail-value" id="feels-like">26°C</div>
+                    <div class="detail-label">Feels Like</div>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-compress-arrows-alt"></i>
+                    <div class="detail-value" id="pressure">1015 hPa</div>
+                    <div class="detail-label">Pressure</div>
+                </div>
+            </div>
+            
+            <div class="unit-toggle">
+                <button class="unit-btn active" id="celsius-btn" data-unit="metric">°C</button>
+                <button class="unit-btn" id="fahrenheit-btn" data-unit="imperial">°F</button>
+            </div>
+        </div>
+
+        <div class="panel forecast-container">
+            <div class="hourly-section">
+                <div class="section-title"><i class="fas fa-clock"></i> Hourly Forecast</div>
+                <div class="hourly-forecast" id="hourly-forecast">
+                    <div class="loading">
+                        <div class="loading-spinner"></div>
+                        Loading hourly forecast...
+                    </div>
+                </div>
+            </div>
+            
+            <div class="daily-section">
+                <div class="section-title"><i class="fas fa-calendar-day"></i> 5-Day Forecast</div>
+                <div class="daily-forecast" id="daily-forecast">
+                    <div class="loading">
+                        <div class="loading-spinner"></div>
+                        Loading daily forecast...
+                    </div>
+                </div>
+            </div>
+            
+            <div class="map-section">
+                <div class="section-title"><i class="fas fa-map-marked-alt"></i> Location Map</div>
+                <div class="map-container">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
