@@ -5,14 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Weather Forecast Web App</title>
 
+  <!-- Icons & fonts -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css"/>
+
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+
   <div class="sky-app">
+
     <header class="app-header">
       <div class="brand">Weather Forecast Web App</div>
       <div class="controls">
@@ -20,9 +25,7 @@
           <input id="qInput" placeholder="Enter city or town (e.g. Tokyo)" autocomplete="off"/>
           <button id="searchBtn" class="btn"><i class="fas fa-search"></i> Find</button>
         </div>
-        <button id="locBtn" class="btn ghost" title="Use my location">
-          <i class="fas fa-location-arrow"></i>
-        </button>
+        <button id="locBtn" class="btn ghost" title="Use my location"><i class="fas fa-location-arrow"></i></button>
       </div>
     </header>
 
@@ -37,6 +40,7 @@
 
       <div class="main-weather">
         <div class="big-icon"><img id="iconImg" src="" alt="icon"/></div>
+
         <div class="temp-block">
           <div id="tempLabel" class="temp-value">--°</div>
           <div id="descLabel" class="desc">—</div>
@@ -47,7 +51,7 @@
         </div>
       </div>
 
-      <div class="stats-grid">
+      <div class="stats-grid" aria-hidden="false">
         <div class="stat"><i class="fas fa-wind"></i><div><div class="val" id="windVal">--</div><div class="lbl">Wind</div></div></div>
         <div class="stat"><i class="fas fa-tint"></i><div><div class="val" id="humVal">--</div><div class="lbl">Humidity</div></div></div>
         <div class="stat"><i class="fas fa-sun"></i><div><div class="val" id="uvVal">—</div><div class="lbl">UV index</div></div></div>
@@ -92,6 +96,7 @@
         <div id="mapArea" style="height:100%;width:100%"></div>
       </div>
     </aside>
+
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js"></script>
