@@ -1,4 +1,4 @@
-const OW_API_KEY = "YOUR_API_KEY_HERE";
+const OW_API_KEY = "eb4a6498fef16cfcc4c77d43cca440a0";
 let unitSystem = "metric";
 
 const qInput = document.getElementById('qInput');
